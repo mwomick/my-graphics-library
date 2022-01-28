@@ -13,7 +13,10 @@ class GBilerpShader : public GShader
 public:
 
     GColor GPixel_ToColor(GPixel p) {
-        return GColor::RGBA(GPixel_GetR(p)/255.f, GPixel_GetG(p)/255.f, GPixel_GetB(p)/255.f, GPixel_GetA(p)/255.f);
+        return GColor::RGBA(GPixel_GetR(p)/255.f, 
+                            GPixel_GetG(p)/255.f, 
+                            GPixel_GetB(p)/255.f, 
+                            GPixel_GetA(p)/255.f);
     }
 
     typedef void (GBilerpShader::*ShaderProc32)(int x, int y, int count, GPixel row[]);
